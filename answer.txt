@@ -1,0 +1,25 @@
+8. Từ branch ở yêu cầu 7, tạo 1 branch feature-tên_bạn-rebase (VD: feauture-sonnt-rebase): -> Branch này sẽ có cả 3 commit trên
+$ git branch
+* feature-tansangle
+  main
+$ git branch feature-tansangle-rebase
+
+14.14 Tại Branch ở yêu cầu 10, thực hiện merge với branch ở yêu cầu 7, sửa conflict nếu có
+$ git branch feature-tansangle-merge
+$ git switch feature-tansangle-merge
+$ git reset HEAD^ --hard
+HEAD is now at a06aa04 add file3.txt
+$ git add file1.txt file2.txt file3.txt
+$ git commit -m 'Git conflict'
+$ git merge feature-tansangle
+Merge made by the 'ort' strategy.
+ commit1.txt | 0
+ commit2.txt | 0
+ commit3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 commit1.txt
+ create mode 100644 commit2.txt
+ create mode 100644 commit3.txt
+
+
+
